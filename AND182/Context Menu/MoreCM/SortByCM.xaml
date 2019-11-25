@@ -1,0 +1,30 @@
+﻿<Window x:Name="SBCMwindow" x:Class="SortByCM"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AND182"
+        mc:Ignorable="d"
+        Title="" Height="153" Width="200" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" WindowStartupLocation="Manual" Topmost="True" ResizeMode="NoResize">
+    <Grid>
+        
+
+        <Rectangle x:Name="shadowRect" Fill="Black" Margin="10,10,10,6" StrokeThickness="0" RadiusX="6" RadiusY="6" Opacity="0.2">
+            <Rectangle.Effect>
+                <BlurEffect Radius="10"/>
+            </Rectangle.Effect>
+        </Rectangle>
+
+        <Rectangle x:Name="rectBack" Fill="#01000000" StrokeThickness="0" Grid.RowSpan="2"/>
+
+        <Rectangle Fill="White" Margin="10" RadiusY="6" RadiusX="6" StrokeThickness="0"/>
+        <StackPanel Margin="10,20" Background="White" MinHeight="21">
+            <local:ContextMenuItem x:Name="cd" Height="28" ItemName="Name"/>
+            <local:ContextMenuItem x:Name="cd_Copy" Height="28" ItemName="Size"/>
+            <local:ContextMenuItem x:Name="cd_Copy1" Height="28" ItemName="Item type"/>
+            <local:ContextMenuItem x:Name="cd_Copy2" Height="28" ItemName="Date modified"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

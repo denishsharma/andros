@@ -1,0 +1,128 @@
+﻿<Window x:Name="ANDWwindow" x:Class="ANDwindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AND028"
+         mc:Ignorable="d" Height="300" Width="500" AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" BorderBrush="#FFC3C3C3" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="1">
+
+    <!--<Window.Resources>
+
+        <Style x:Key="SliderRepeatButton" TargetType="RepeatButton">
+            <Setter Property="SnapsToDevicePixels" Value="true" />
+            <Setter Property="OverridesDefaultStyle" Value="true" />
+            <Setter Property="IsTabStop" Value="false" />
+            <Setter Property="Focusable" Value="false" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RepeatButton">
+                        <Border Background="Transparent"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SliderRepeatButton1" TargetType="RepeatButton">
+            <Setter Property="SnapsToDevicePixels" Value="true" />
+            <Setter Property="OverridesDefaultStyle" Value="true" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RepeatButton">
+                        <Border SnapsToDevicePixels="True" Background="YellowGreen"  BorderThickness="1" BorderBrush="YellowGreen" Height="3"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SliderThumb" TargetType="Thumb">
+            <Setter Property="SnapsToDevicePixels" Value="true" />
+            <Setter Property="OverridesDefaultStyle" Value="true" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Thumb">
+                       
+                            <Ellipse Width="20" Height="20" Fill="#EAE9E4" Stroke="Black" Name="Ellipse" />
+                     
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <ControlTemplate x:Key="Slider"  TargetType="Slider">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" MinHeight="{TemplateBinding MinHeight}" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TickBar  x:Name="TopTick"  Fill="LightGray" VerticalAlignment="Top"   SnapsToDevicePixels="True" Grid.Row="0" Placement="Top" Height="5" Visibility="Visible"/>
+                <Border BorderBrush="LightGray"  BorderThickness="0,0,0,1" ></Border>
+                <Border x:Name="TrackBackground" VerticalAlignment="Center" Margin="0,-10,0,0" BorderBrush="Red" Background="Red" Height="3"   Grid.Row="1"  BorderThickness="1"/>
+                <Track Grid.Row="1" x:Name="PART_Track" Margin="0,-10,0,0"  >
+                    <Track.DecreaseRepeatButton>
+                        <RepeatButton Style="{StaticResource SliderRepeatButton1}"  Command="Slider.DecreaseLarge" />
+                    </Track.DecreaseRepeatButton>
+                    <Track.Thumb>
+                        <Thumb Style="{StaticResource SliderThumb}" Margin="0,-20,0,0" />
+                    </Track.Thumb>
+                    <Track.IncreaseRepeatButton>
+                        <RepeatButton Style="{StaticResource SliderRepeatButton}" Command="Slider.IncreaseLarge" />
+                    </Track.IncreaseRepeatButton>
+                </Track>
+                <TextBlock Text="0" Grid.Row="1" Margin="0,15,0,0"></TextBlock>
+                <TickBar x:Name="BottomTick" Fill="LightGray"   SnapsToDevicePixels="True" Grid.Row="2"   Placement="Bottom" Height="4" Visibility="Collapsed" />
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="TickPlacement"  Value="TopLeft">
+                    <Setter TargetName="TopTick" Property="Visibility"  Value="Visible" />
+                </Trigger>
+                <Trigger Property="TickPlacement" Value="BottomRight">
+                    <Setter TargetName="BottomTick"  Property="Visibility"  Value="Visible" />
+                </Trigger>
+                <Trigger Property="TickPlacement" Value="Both">
+                    <Setter TargetName="TopTick" Property="Visibility" Value="Visible" />
+                    <Setter TargetName="BottomTick" Property="Visibility" Value="Visible" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <Style x:Key="Horizontal_Slider" TargetType="Slider">
+            <Setter Property="Focusable" Value="False"/>
+            <Setter Property="SnapsToDevicePixels" Value="true" />
+            <Setter Property="OverridesDefaultStyle" Value="true" />
+            <Style.Triggers>
+                <Trigger Property="Orientation" Value="Horizontal">
+                    <Setter Property="MinHeight" Value="21" />
+                    <Setter Property="MinWidth" Value="104" />
+                    <Setter Property="Template" Value="{StaticResource Slider}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>-->
+
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/AND028;component/Resources/SliderStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Rectangle Fill="#FFE6D777" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="498" StrokeThickness="0" Grid.ColumnSpan="2"/>
+        <Label x:Name="label" Content="User Account Control" HorizontalAlignment="Left" VerticalAlignment="Top" Height="32" Padding="10,0,0,0" VerticalContentAlignment="Center" Width="190" Margin="10,0,0,0"/>
+        <Rectangle x:Name="headerRect" HorizontalAlignment="Left" Height="32" StrokeThickness="0" VerticalAlignment="Top" Width="498" Fill="#01000000"/>
+        <local:RadioButton x:Name="rb1" HorizontalAlignment="Left" Height="24" Margin="10,114,0,0" VerticalAlignment="Top" Width="110" Text="Radio Button 1" IsTrue="True"/>
+        <local:RadioButton x:Name="rb2" HorizontalAlignment="Left" Height="24" Margin="10,143,0,0" VerticalAlignment="Top" Width="110" Text="Radio Button 2"/>
+        <local:RadioButton x:Name="rb3" HorizontalAlignment="Left" Height="24" Margin="10,172,0,0" VerticalAlignment="Top" Width="110" Text="Radio Button 3"/>
+        <local:CheckBox HorizontalAlignment="Left" Height="24" Margin="135,114,0,0" VerticalAlignment="Top" Width="100" Text="Check Box 1"/>
+        <local:CheckBox HorizontalAlignment="Left" Height="24" Margin="135,143,0,0" VerticalAlignment="Top" Width="100" Text="Check Box 2"/>
+        <local:CheckBox HorizontalAlignment="Left" Height="24" Margin="135,172,0,0" VerticalAlignment="Top" Width="100" Text="Check Box 3"/>
+        <local:ToggleButton x:Name="tb1" HorizontalAlignment="Left" Height="24" Margin="261,114,0,0" VerticalAlignment="Top" Width="50" Enabled="False" IsTrue="True"/>
+        <local:ToggleButton x:Name="tb2" HorizontalAlignment="Left" Height="24" Margin="261,143,0,0" VerticalAlignment="Top" Width="50" Enabled="True"/>
+        <local:ToggleButton x:Name="tb3" HorizontalAlignment="Left" Height="24" Margin="261,172,0,0" VerticalAlignment="Top" Width="50"/>
+        <local:ToggleButton2 HorizontalAlignment="Left" Height="24" Margin="335,114,0,0" VerticalAlignment="Top" Width="40"/>
+        <Slider x:Name="slider" HorizontalAlignment="Left" Margin="135,233,0,0" VerticalAlignment="Top" Width="263" IsTabStop="False" Maximum="100" Value="20" Height="27" LargeChange="10" Focusable="False"/>
+    </Grid>
+</Window>

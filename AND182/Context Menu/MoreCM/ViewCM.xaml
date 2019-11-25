@@ -1,0 +1,41 @@
+﻿<Window x:Name="VCMwindow" x:Class="ViewCM"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AND182"
+        mc:Ignorable="d"
+        Title="" Height="294" Width="200" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" WindowStartupLocation="Manual" Topmost="True" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="145*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+
+        <Rectangle x:Name="shadowRect" Fill="Black" Margin="10,10,10,6" StrokeThickness="0" RadiusX="6" RadiusY="6" Opacity="0.2">
+            <Rectangle.Effect>
+                <BlurEffect Radius="10"/>
+            </Rectangle.Effect>
+        </Rectangle>
+
+        <Rectangle x:Name="rectBack" Fill="#01000000" StrokeThickness="0" Grid.RowSpan="2"/>
+
+        <Rectangle Fill="White" Margin="10,10,10,6" RadiusY="6" RadiusX="6" StrokeThickness="0"/>
+        <StackPanel Margin="10,20,10,16" Background="White" MinHeight="21">
+            <local:ContextMenuItem x:Name="ab" Height="28" ItemName="View" IsMore="True"/>
+            <local:ContextMenuItem x:Name="bc" Height="28" ItemName="Sort by" IsMore="True"/>
+            <local:ContextMenuItem x:Name="cd" Height="28" ItemName="Refresh"/>
+            <local:SeperatorCM Height="10"/>
+            <local:ContextMenuItem Height="28" ItemName="Paste" Enabled="False"/>
+            <local:SeperatorCM Height="10"/>
+            <local:ContextMenuItem Height="28" ItemName="New Text Document" IsIconVisible="Visible" Icon="/AND182;component/Images/icons8-document-32.png"/>
+            <local:ContextMenuItem x:Name="newfolderCMI" Height="28" ItemName="New Folder" IsIconVisible="Visible" Icon="/AND182;component/Images/FolderIcon.png"/>
+            <local:ContextMenuItem Height="28" ItemName="New Contact" IsIconVisible="Visible" Icon="/AND182;component/Images/icons8-contact-32.png"/>
+            <local:SeperatorCM Height="10"/>
+            <local:ContextMenuItem Height="28" ItemName="Personalise" IsIconVisible="Visible" Icon="/AND182;component/Images/icons8-imac-32.png"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

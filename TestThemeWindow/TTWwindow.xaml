@@ -1,0 +1,50 @@
+﻿<Window x:Name="TTWWwindow" x:Class="TTWwindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestThemeWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="320" Width="320" PreviewMouseMove="ResetCursor" Background="{x:Null}" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" MinHeight="78" MinWidth="300">
+    <Grid x:Name="grdMain">
+        <Rectangle x:Name="backWindowRect" Fill="#01000000" StrokeThickness="0"/>
+        <Rectangle x:Name="shadowBackDeactivate" Fill="Black" StrokeThickness="0" Margin="20" Opacity="0">
+            <Rectangle.Effect>
+                <BlurEffect Radius="10"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Rectangle x:Name="shadowBack" Fill="Black" StrokeThickness="0" Margin="20" Opacity="0.2">
+            <Rectangle.Effect>
+                <BlurEffect Radius="20"/>
+            </Rectangle.Effect>
+        </Rectangle>
+
+
+        <Rectangle x:Name="right" Width="7" HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="0,26,13,26" PreviewMouseDown="Resize" MouseMove="DisplayResizeCursor" Opacity="0.01" Fill="#01000000" StrokeThickness="0" />
+        <Rectangle x:Name="topRight" Width="13" Height="13" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,13,13,0" PreviewMouseDown="Resize" MouseMove="DisplayResizeCursor" Opacity="0.01" Fill="#01000000" StrokeThickness="0" />
+        <Rectangle x:Name="bottomRight" Width="12" Height="13" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,13,13" PreviewMouseDown="Resize" MouseMove="DisplayResizeCursor" Opacity="0.01" Fill="#01000000" StrokeThickness="0" />
+        <Rectangle x:Name="bottom" Height="7" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" Margin="26,0,25,13" PreviewMouseDown="Resize" MouseMove="DisplayResizeCursor" Opacity="0.01" Fill="#01000000" StrokeThickness="0"  />
+        <Rectangle x:Name="bottomLeft" Width="13" Height="13" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="13,0,0,13" PreviewMouseDown="Resize" MouseMove="DisplayResizeCursor" Opacity="0.01" Fill="#01000000" StrokeThickness="0" />
+        <Rectangle x:Name="lefta" Width="7" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="13,26,0,26" PreviewMouseDown="Resize" MouseMove="DisplayResizeCursor" Opacity="0.01" Fill="#01000000" StrokeThickness="0" />
+        <Rectangle x:Name="topa" Height="7" HorizontalAlignment="Stretch"  VerticalAlignment="Top" Margin="26,13,26,0" PreviewMouseDown="Resize" MouseMove="DisplayResizeCursor" Opacity="0.01" Fill="#01000000" StrokeThickness="0"  />
+        <Rectangle x:Name="topLeft" Width="13" Height="13" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="13,13,0,0" PreviewMouseDown="Resize" MouseMove="DisplayResizeCursor" Opacity="0.01" Fill="#01000000" StrokeThickness="0" />
+
+        <Border x:Name="headerRect" BorderThickness="0" Height="32" Margin="20,20,20,0" VerticalAlignment="Top" Background="White" CornerRadius="6,6,0,0"/>
+        <Border BorderThickness="0" Margin="20,52,20,20" Background="#FFFDFDFD" CornerRadius="0,0,6,6"/>
+
+        <Label x:Name="lblWindowText" Content="Google Drive" Foreground="#FF595959" Height="32" VerticalContentAlignment="Center" Padding="5,0,0,0" Margin="60,20,130,0" FontFamily="Segoe UI Semibold" FontSize="11" VerticalAlignment="Top" />
+        <Image x:Name="image" HorizontalAlignment="Left" Height="16" Margin="39,28,0,0" VerticalAlignment="Top" Width="16" Source="Images/icons8-google-drive-24.png"/>
+        <Border x:Name="headerOverRect" BorderThickness="0" Height="32" Margin="20,20,20,0" VerticalAlignment="Top" Background="#01000000" CornerRadius="6,6,0,0"/>
+
+
+        <Ellipse x:Name="ell_close" Width="10" Height="10" Fill="#FFF06969" HorizontalAlignment="Right" Margin="0,31,39,0" VerticalAlignment="Top"/>
+        <Ellipse x:Name="ell_maximize" Width="10" Height="10" Fill="#FFEEBD53" HorizontalAlignment="Right" Margin="0,31,59,0" VerticalAlignment="Top"/>
+        <Ellipse x:Name="ell_minimize" Width="10" Height="10" Fill="#FF6CBCFF" HorizontalAlignment="Right" Margin="0,31,79,0" VerticalAlignment="Top"/>
+
+        <Rectangle x:Name="closeRect" Fill="#01000000" HorizontalAlignment="Right" Height="32" Margin="0,20,34,0" Width="20" VerticalAlignment="Top"/>
+        <Rectangle x:Name="maximizeRect" Fill="#01000000" Height="32" Margin="0,20,54,0" Width="20" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        <Rectangle x:Name="minimizeRect" Fill="#01000000" Height="32" Margin="0,20,74,0" Width="20" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        <Grid x:Name="EAPContainer" Margin="20,52,20,26" Background="#01000000"/>
+
+    </Grid>
+</Window>

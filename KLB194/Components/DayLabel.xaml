@@ -1,0 +1,14 @@
+﻿<UserControl x:Name="DLcontrol" x:Class="DayLabel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KLB194"
+             mc:Ignorable="d" 
+             d:DesignHeight="44" d:DesignWidth="44">
+    <Grid>
+        <Ellipse x:Name="hoverCircle" Fill="Black" Height="30" StrokeThickness="0" Width="30" Opacity="0"/>
+        <Label x:Name="labelText" Content="4" Width="44" Height="44" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0" Foreground="#FF575757" FontWeight="SemiBold" Background="#01000000"/>
+
+    </Grid>
+</UserControl>

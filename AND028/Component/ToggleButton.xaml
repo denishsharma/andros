@@ -1,0 +1,24 @@
+﻿<UserControl x:Name="TBcontrol" x:Class="ToggleButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AND028"
+             mc:Ignorable="d" 
+             d:DesignHeight="24" d:DesignWidth="50">
+    <Grid>
+        <Rectangle   x:Name="backRect" Height="18" StrokeThickness="0" VerticalAlignment="Center" Stroke="#FF52A1FF" RadiusY="9" RadiusX="9" Fill="#FF52A1FF" Opacity="0"/>
+
+        <Rectangle   x:Name="backHoverRect" Height="18" VerticalAlignment="Center" Stroke="Gainsboro" RadiusY="9" RadiusX="9" Fill="Gainsboro" StrokeThickness="0" Opacity="0"/>
+        <Rectangle   x:Name="backNormRect" Height="18" VerticalAlignment="Center" RadiusY="9" RadiusX="9" Stroke="#FFF7F7F7" Fill="#FFE8E8E8" StrokeThickness="0" Margin="0,3"/>
+
+        <Ellipse  x:Name="indCircle" Height="10" StrokeThickness="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="10" Fill="White" Margin="3,6,35,6" Opacity="0"/>
+        <Ellipse  x:Name="indDisabledCircleRight" Height="10" StrokeThickness="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="10" Fill="#FFB0D4FF" Margin="35,6,3,6" Opacity="0"/>
+
+        <Ellipse  x:Name="indHoverCircle" Height="10" StrokeThickness="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="10" Fill="#FF9B9B9B" Margin="3,6,35,6" Opacity="0"/>
+        <Ellipse  x:Name="indNormCircle" Height="10" StrokeThickness="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="10" Fill="#FFCBCBCB" Margin="3,6,35,6"/>
+        <Ellipse  x:Name="indDisabledCircle" Height="10" StrokeThickness="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="10" Fill="#FFDEDEDE" Margin="3,6,35,6" Opacity="0"/>
+
+        <Rectangle x:Name="frontRect" HorizontalAlignment="Left" Height="18" RadiusY="9" RadiusX="9" StrokeThickness="0" VerticalAlignment="Center" Width="50" Fill="#01000000"/>
+    </Grid>
+</UserControl>
